@@ -41,3 +41,13 @@ div.conteiner-add-post div.flex-options input[type=submit]{
     border-radius: 10px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+div.conteiner-add-post div.info-post-textarea textarea{
+    border: 1px solid #000;
+    resize: none;
+    outline: none;
+    background: none;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
