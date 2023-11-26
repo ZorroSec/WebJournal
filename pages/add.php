@@ -22,6 +22,9 @@
         <div class="submit-post">
             <input type="submit" name="submit" id="submit" value="Enviar">
         </div>
+        <div class="info-post-textarea">
+            <textarea name="info-post" id="info-post"></textarea>
+        </div>
     </div>
 </body>
 </html>
