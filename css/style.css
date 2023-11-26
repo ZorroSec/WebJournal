@@ -15,3 +15,15 @@ header.header{
     background-color: #ffffff;
     color: #23abff;
 }
+div.conteiner-add-post{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+div.conteiner-add-post div.flex-options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}

@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="info-post-textarea">
-            <textarea name="info-post" id="info-post"></textarea>
+            <textarea name="info-post" id="info-post" style="width: 346px; height: 128px;"></textarea>
         </div>
     </div>
 </body>
