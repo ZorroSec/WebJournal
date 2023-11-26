@@ -1,4 +1,10 @@
 <?php
+    include_once('config.php') ;
+    if(isset( $_POST['submit'] )){
+        $date = $_POST['info-date'];
+        $post = $_POST['info-post'];
+
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +27,7 @@
         <div class="flex-options">
             <div class="hour">
                 <label for="date"><i class="fa-regular fa-calendar"></i></label>
-                <input type="text" name="date" id="date" readonly>
+                <input type="text" name="info-date" id="date" readonly>
             </div>
             <div class="submit-post">
                 <input type="submit" name="submit" id="submit" value="Enviar">
@@ -29,6 +35,13 @@
         </div>
         <div class="info-post-textarea">
             <textarea name="info-post" id="info-post" style="width: 346px; height: 128px;"></textarea>
+        </div>
+        <div class="info-post-name">
+            <label for="info-name"><i class="fa-solid fa-user fa-fade"></i></label>
+            <input type="text" name="info-nome" id="info-nome" placeholder="Nome">
+        </div>
+        <div class="info-post-image">
+            <label for="info-img"><i class="fa-solid fa-image"></i></label>
         </div>
     </div>
     <script src="../scripts/add.js"></script>
