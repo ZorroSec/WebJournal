@@ -20,7 +20,8 @@
                 $post = $_POST['info-post'];
                 $name = $_POST['info-name'];
                 $img = $_POST['info-img'];
-                $result = $conn->query("INSERT INTO post() VALUES ()");
+                $result = $conn->query("INSERT INTO post(date, post, nome, nome_arquivo, path) VALUES ('$date', '$post', '$name', '$newNameFile', '$destination')");
+
             }
         }
 
