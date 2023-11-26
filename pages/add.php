@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.2/css/all.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
@@ -20,6 +20,7 @@
     <div class="conteiner-add-post">
         <div class="flex-options">
             <div class="hour">
+                <label for="date"><i class="fa-regular fa-calendar"></i></label>
                 <input type="text" name="date" id="date" readonly>
             </div>
             <div class="submit-post">
