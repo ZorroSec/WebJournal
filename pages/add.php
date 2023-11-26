@@ -42,6 +42,7 @@
         </div>
         <div class="info-post-image">
             <label for="info-img"><i class="fa-solid fa-image"></i></label>
+            <input type="file" name="info-img" id="info-img" placeholder="Escolher">
         </div>
     </div>
     <script src="../scripts/add.js"></script>
