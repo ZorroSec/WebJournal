@@ -13,6 +13,8 @@
             </h2>
         </div>
     </header>
-    
+    <div class="conteiner">
+        <div class="posts"></div>
+    </div>
 </body>
 </html>
