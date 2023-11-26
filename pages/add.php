@@ -18,11 +18,13 @@
         </div>
     </header>
     <div class="conteiner-add-post">
-        <div class="hour">
-            <input type="text" name="date" id="date" readonly>
-        </div>
-        <div class="submit-post">
-            <input type="submit" name="submit" id="submit" value="Enviar">
+        <div class="flex-options">
+            <div class="hour">
+                <input type="text" name="date" id="date" readonly>
+            </div>
+            <div class="submit-post">
+                <input type="submit" name="submit" id="submit" value="Enviar">
+            </div>
         </div>
         <div class="info-post-textarea">
             <textarea name="info-post" id="info-post"></textarea>
