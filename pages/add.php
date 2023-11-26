@@ -24,26 +24,28 @@
         </div>
     </header>
     <div class="conteiner-add-post">
-        <div class="flex-options">
-            <div class="hour">
-                <label for="date"><i class="fa-regular fa-calendar"></i></label>
-                <input type="text" name="info-date" id="date" readonly>
+        <form action="add.php" method="POST" enctype="multipart/form-data">
+            <div class="flex-options">
+                <div class="hour">
+                    <label for="date"><i class="fa-regular fa-calendar"></i></label>
+                    <input type="text" name="info-date" id="date" readonly>
+                </div>
+                <div class="submit-post">
+                    <input type="submit" name="submit" id="submit" value="Enviar">
+                </div>
             </div>
-            <div class="submit-post">
-                <input type="submit" name="submit" id="submit" value="Enviar">
+            <div class="info-post-textarea">
+                <textarea name="info-post" id="info-post" style="width: 346px; height: 128px;"></textarea>
             </div>
-        </div>
-        <div class="info-post-textarea">
-            <textarea name="info-post" id="info-post" style="width: 346px; height: 128px;"></textarea>
-        </div>
-        <div class="info-post-name">
-            <label for="info-name"><i class="fa-solid fa-user fa-fade"></i></label>
-            <input type="text" name="info-nome" id="info-nome" placeholder="Nome">
-        </div>
-        <div class="info-post-image">
-            <label for="info-img"><i class="fa-solid fa-image"></i></label>
-            <input type="file" name="info-img" id="info-img" placeholder="Escolher">
-        </div>
+            <div class="info-post-name">
+                <label for="info-name"><i class="fa-solid fa-user fa-fade"></i></label>
+                <input type="text" name="info-nome" id="info-nome" placeholder="Nome">
+            </div>
+            <div class="info-post-image">
+                <label for="info-img"><i class="fa-solid fa-image"></i></label>
+                <input type="file" name="info-img" id="info-img">
+            </div>
+        </form>
     </div>
     <script src="../scripts/add.js"></script>
 </body>
