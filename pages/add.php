@@ -30,6 +30,6 @@
             <textarea name="info-post" id="info-post" style="width: 346px; height: 128px;"></textarea>
         </div>
     </div>
-    <script src="../scripts/addd.js"></script>
+    <script src="../scripts/add.js"></script>
 </body>
 </html>
