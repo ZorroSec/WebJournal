@@ -1,8 +1,28 @@
 <?php
     include_once('config.php') ;
     if(isset( $_POST['submit'] )){
-        $date = $_POST['info-date'];
-        $post = $_POST['info-post'];
+        if(isset($_FILES['info-img'])){
+            $file = $_FILES['file'];
+            if($file['error']){
+                die("error");
+            }
+            if($file['size'] < 30000000){
+                die('error');
+            }
+            $fileMoveImage = "../images/";
+            $nameOfImg = $file['name'];
+            $extension = strtolower(pathinfo($fileMoveImage, PATHINFO_EXTENSION));
+            $newNameFile = uniqid();
+            $destination = $fileMoveImage . $newNameFile . '.'. $extension;
+            $check = move_uploaded_file($file['tmp_name'], $destination);
+            if($check){
+                $date = $_POST['date'];
+                $post = $_POST['info-post'];
+                $name = $_POST['info-name'];
+                $img = $_POST['info-img'];
+                $result = $conn->query("INSERT INTO post() VALUES ()");
+            }
+        }
 
     }
 ?>
