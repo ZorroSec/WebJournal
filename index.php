@@ -9,6 +9,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>WebJournal</title>
+    <style>
+        div.conteiner{
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.conteiner div.posts div.post div.userName{
+            display: flex;
+        }
+        div.conteiner div.posts div.post div.userName div#userImg{
+            height: 30px;
+            width: 30px;
+            border-radius: 50px;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -23,11 +37,11 @@
             <?php while($user_data = mysqli_fetch_assoc($read)) { ?>
                 <div class="post">
                     <div class="userName">
-                        <div class="userImg"></div>
-                        <h4><?php echo $user_data['nome'] ?></h4>
+                        <div id="userImg"></div>
+                        <p><?php echo $user_data['nome'] ?></p>
                     </div>
                     <div class="imgPost">
-                        <img src="pages/<?php echo $user_data['path'] ?>">
+                        <img src="pages/<?php echo $user_data['path'] ?>" height="100%" width="50%">
                     </div>
                 </div>
             <?php } ?>
