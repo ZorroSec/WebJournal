@@ -14,6 +14,9 @@
             padding: 10px;
             font-family: Arial, Helvetica, sans-serif;
         }
+        div.conteiner div.posts div.post{
+            margin-top: 20px;
+        }
         div.conteiner div.posts div.post div.userName{
             display: flex;
         }
@@ -21,6 +24,19 @@
             height: 30px;
             width: 30px;
             border-radius: 50px;
+        }
+        @media only screen and (max-width: 900px){
+            div.conteiner div.posts div.post{
+                text-align: center;
+            }
+            div.conteiner div.posts div.post div.userName{
+                align-items: center;
+                justify-content: center;
+            }
+            div.conteiner div.posts div.post div.imgPost img{
+                height: 50%;
+                width: 50%;
+            }
         }
     </style>
 </head>
@@ -41,7 +57,7 @@
                         <p><?php echo $user_data['nome'] ?></p>
                     </div>
                     <div class="imgPost">
-                        <img src="pages/<?php echo $user_data['path'] ?>" height="100%" width="50%">
+                        <img id="imgPost" src="pages/<?php echo $user_data['path'] ?>">
                     </div>
                 </div>
             <?php } ?>
