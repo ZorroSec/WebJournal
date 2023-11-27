@@ -77,7 +77,7 @@
     <header class="header">
         <div class="logo">
             <h2>
-                WebJournal
+                <a style="text-decoration: none; color: #23abff;" href="../index.php">WebJournal</a>
             </h2>
         </div>
     </header>
