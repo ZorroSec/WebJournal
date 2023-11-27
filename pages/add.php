@@ -55,7 +55,13 @@
             margin-top: 10px;
             cursor: pointer;
         }
-        label
+        div.info-post-name input[type=text]{
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: black;
+            border-bottom-right-radius: ;
+        }
     </style>
 </head>
 <body>
