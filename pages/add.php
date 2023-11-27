@@ -60,7 +60,16 @@
             outline: none;
             background-color: transparent;
             color: black;
-            border-bottom-right-radius: ;
+            border-bottom: 1px solid #000;
+            width: 100%;
+        }
+        div.info-hour input[type=datetime-local]{
+            border: none;
+            color: black;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid black;
+            width: 100%;
         }
     </style>
 </head>
@@ -75,7 +84,7 @@
     <div class="conteiner-add-post">
         <form action="add.php" method="POST" enctype="multipart/form-data">
             <div class="flex-options">
-                <div class="hour">
+                <div class="info-hour">
                     <input type="datetime-local" name="info-date" id="date">
                 </div>
                 <div class="submit-post">
@@ -86,7 +95,6 @@
                 <textarea name="info-post" id="info-post" style="width: 346px; height: 128px;"></textarea>
             </div>
             <div class="info-post-name">
-                <label for="info-nome"><i class="fa-solid fa-user"></i></label>
                 <input type="text" name="info-nome" id="info-nome" placeholder="Nome">
             </div>
             <div class="info-post-image">
