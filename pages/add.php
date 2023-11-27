@@ -34,6 +34,29 @@
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v6.4.2/css/all.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
+    <style>
+        input[type=file]{
+            display: none;
+        }
+        div.info-post-image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        div.info-post-image label{
+            padding: 10px 20px;
+            width: 100px;
+            border-radius: 15px;
+            background: #333;
+            color: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            display: block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        label
+    </style>
 </head>
 <body>
     <header class="header">
@@ -47,8 +70,7 @@
         <form action="add.php" method="POST" enctype="multipart/form-data">
             <div class="flex-options">
                 <div class="hour">
-                    <label for="date"><i class="fa-regular fa-calendar"></i></label>
-                    <input type="text" name="info-date" id="date" readonly>
+                    <input type="datetime-local" name="info-date" id="date">
                 </div>
                 <div class="submit-post">
                     <input type="submit" name="submit" id="submit" value="Enviar">
@@ -58,7 +80,7 @@
                 <textarea name="info-post" id="info-post" style="width: 346px; height: 128px;"></textarea>
             </div>
             <div class="info-post-name">
-                <label for="info-nome"><i class="fa-solid fa-user fa-fade"></i></label>
+                <label for="info-nome"><i class="fa-solid fa-user"></i></label>
                 <input type="text" name="info-nome" id="info-nome" placeholder="Nome">
             </div>
             <div class="info-post-image">
