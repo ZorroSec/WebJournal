@@ -1,6 +1,6 @@
 <?php
     include_once('pages/config.php');
-    $read = $conn->query("SELECT * FROM posts ORDER BY id DESC");
+    $read = mysqli_query($conn, "SELECT * FROM posts ORDER BY id DESC");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,11 +20,14 @@
     </header>
     <div class="conteiner">
         <div class="posts">
-            <?php while ($row = $read->fetch_assoc()) { ?>
+            <?php while($user_data = mysqli_fetch_assoc($read)) { ?>
                 <div class="post">
                     <div class="userName">
                         <div class="userImg"></div>
-                        <h4><?php echo $row['nome'] ?></h4>
+                        <h4><?php echo $user_data['nome'] ?></h4>
+                    </div>
+                    <div class="imgPost">
+                        <img src="pages/<?php echo $user_data['path'] ?>">
                     </div>
                 </div>
             <?php } ?>
