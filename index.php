@@ -10,7 +10,7 @@
     <header class="header">
         <div class="logo">
             <h2>
-                <a href="index.php">WebJournal</a>
+                <a href="index.php" style="text-decoration: none; color: #23abff;">WebJournal</a>
             </h2>
         </div>
     </header>
