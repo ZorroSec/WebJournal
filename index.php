@@ -1,6 +1,6 @@
 <?php
     include_once('pages/config.php');
-    $read = $conn->query('SELECT * FROM posts ORDER BY DESC');
+    $read = $conn->query("SELECT * FROM posts ORDER BY id DESC");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,7 +21,12 @@
     <div class="conteiner">
         <div class="posts">
             <?php while ($row = $read->fetch_assoc()) { ?>
-                <?php echo $row ?>
+                <div class="post">
+                    <div class="userName">
+                        <div class="userImg"></div>
+                        <h4><?php echo $row['nome'] ?></h4>
+                    </div>
+                </div>
             <?php } ?>
         </div>
     </div>
