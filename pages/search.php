@@ -14,15 +14,16 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>WebJournal | Search User</title>
     <style>
-        div.conteiner-read-search-post-search{
+        div.conteiner-search form{
             margin: auto;
             margin-top: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 75%;
+            margin-bottom: 1em;
         }
-        div.conteiner-read-search-post-search div.search input[type=text]{
+        div.conteiner-search form div.search input[type=text]{
             padding: 10px 50px;
             border-radius: 20px;
             margin-right: 10px;
@@ -30,7 +31,7 @@
             box-shadow: 0 0 2.2em rgba(0,0,0,.3);
             width: 100%;
         }
-        div.conteiner-read-search-post-search div.btn input[type=submit]{
+        div.conteiner-search form div.btn input[type=submit]{
             background-color: #23abff;
             padding: 10px 15px;
             color: white;
@@ -39,11 +40,7 @@
             margin-left: 10px;
             outline: none;
         }
-        div.conteiner-read-search-post{
-            padding: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-        div.conteiner-read-search-post div.posts div.post{
+        div.conteiner-read-search-post div.search-post{
             background-color: #fff;
             margin-top: 20px;
             width: 75%;
@@ -53,28 +50,28 @@
             margin-bottom: 20px;
             border-bottom-right-radius: 15px;
         }
-        div.conteiner-read-search-post div.posts div.post div.userName{
+        div.conteiner-read-search-post div.search-post div.userName{
             display: flex;
             margin-bottom: 5px;
         }
-        div.conteiner-read-search-post div.posts div.post div.userName div#userImg{
+        div.conteiner-read-search-post div.search-post div.userName div#userImg{
             height: 30px;
             width: 30px;
             background: #23abff;
             margin-right: 3px;
             border-radius: 50px;
         }
-        div.conteiner-read-search-post div.posts div.post{
+        div.conteiner-read-search-post div.search-post div.post{
             text-align: center;
         }
-        div.conteiner-read-search-post div.posts div.post div.userName{
+        div.conteiner-read-search-post div.posts div.search-post div.userName{
             align-items: center;
             justify-content: center;
         }
-        div.conteiner-read-search-post div.posts div.post div.imgPost{
+        div.conteiner-read-search-post div.search-post div.imgPost{
             text-align: center;
         }
-        div.conteiner-read-search-post div.posts div.post div.imgPost img{
+        div.conteiner-read-search-post div.search-post div.imgPost img{
             height: 50%;
             width: 50%;
         }
@@ -97,7 +94,7 @@
             <a href="pages/blog.php" style="text-decoration: none; color: #23abff;"><i class="fa-solid fa-blog"></i></a>
         </div>
     </header>
-    <div class="conteiner-read-search-post-search">
+    <div class="conteiner-search">
         <form action="search.php" method="POST">
 
             <div class="search">
@@ -109,7 +106,7 @@
         </form>
     </div>
 
-    <div class="conteiner-read-search-post-read-search-post">
+    <div class="conteiner-read-search-post">
         <?php while($search_post = mysqli_fetch_assoc($GLOBALS["search_name"])) { ?>
             <div class="search-post">
                 <div class="userName">
