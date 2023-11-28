@@ -29,7 +29,7 @@
             border-radius: 50px;
         }
         div.conteiner div.posts div.post{
-            text-align: center;
+            text-align: left;
         }
         div.conteiner div.posts div.post div.userName{
             align-items: center;
