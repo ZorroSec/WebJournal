@@ -30,6 +30,7 @@
             border-radius: 20px;
             border: none;
             margin-left: 10px;
+            outline: none;
         }
     </style>
 </head>
@@ -37,7 +38,7 @@
     <header class="header" style="justify-content: space-between;">
         <div class="logo">
             <h2>
-                <a href="index.php" style="text-decoration: none; color: #23abff;">WebJournal</a>
+                <a href="../index.php" style="text-decoration: none; color: #23abff;">WebJournal</a>
             </h2>
         </div>
         <div class="link">
