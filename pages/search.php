@@ -3,6 +3,7 @@
     if(isset($_POST['submit'])){
         $nome = $_POST["name"];
         $search_name = mysqli_query($conn, "SELECT * FROM posts WHERE nome = '$nome'");
+        
     }
 ?>
 <!DOCTYPE html>
@@ -14,6 +15,9 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>WebJournal | Search User</title>
     <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
         div.conteiner-search form{
             margin: auto;
             margin-top: 40px;
@@ -30,6 +34,7 @@
             border: 1px solid rgba(0,0,0,0.3);
             box-shadow: 0 0 2.2em rgba(0,0,0,.3);
             width: 100%;
+            outline: none;
         }
         div.conteiner-search form div.btn input[type=submit]{
             background-color: #23abff;
