@@ -1,3 +1,11 @@
+<?php
+    include_once('config.php');
+    if(isset($_POST['submit'])){
+        $nome = $_POST["name"];
+        $search_name = mysqli_query($conn, "SELECT * FROM posts WHERE nome = '$nome'");
+        print_r($search_name);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +23,7 @@
             justify-content: center;
             width: 75%;
         }
-        div.conteiner-search div.search input[type=search]{
+        div.conteiner-search div.search input[type=text]{
             padding: 10px 50px;
             border-radius: 20px;
             margin-right: 10px;
@@ -52,12 +60,33 @@
         </div>
     </header>
     <div class="conteiner-search">
-        <div class="search">
-            <input type="search" name="search" id="search" placeholder="search">
-        </div>
-        <div class="btn">
-            <input type="submit" name="submit" value="Search">
-        </div>
+        <form action="search.php" method="POST">
+
+            <div class="search">
+                <input type="text" name="name" id="name" placeholder="search">
+            </div>
+            <div class="btn">
+                <input type="submit" name="submit" value="Search">
+            </div>
+        </form>
+    </div>
+
+    <div class="conteiner-read-search-post">
+        <?php while($search_post = mysqli_fetch_assoc($search_name)) { ?>
+            <div class="search-post">
+                <div class="userName">
+                    <div id="userImg"></div>
+                    <p><?php echo $search_post['nome'] ?></p>
+                </div>
+                <div class="imgPost">
+                    <img id="imgPost" src="pages/<?php echo $search_post['path'] ?>">
+                </div>
+                <div class="subtitlePost">
+                    <p><?php echo $search_post['post'] ?></p>
+                </div>
+                    <!-- <div class="break"></div> -->
+            </div>
+        <?php } ?>
     </div>
 </body>
 </html>
