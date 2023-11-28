@@ -46,6 +46,8 @@
             width: 500px;
             border-bottom-left-radius: 20px;
             border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px
         }
     </style>
 </head>
