@@ -24,6 +24,8 @@
         div.conteiner div.posts div.post div.userName div#userImg{
             height: 30px;
             width: 30px;
+            background: #23abff;
+            margin-right: 3px;
             border-radius: 50px;
         }
         div.conteiner div.posts div.post{
