@@ -9,7 +9,6 @@ body{
 header.header{
     display: flex;
     align-items: center;
-    justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
     padding: 10px;
     background-color: #ffffff;
