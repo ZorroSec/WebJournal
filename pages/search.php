@@ -3,7 +3,6 @@
     if(isset($_POST['submit'])){
         $nome = $_POST["name"];
         $search_name = mysqli_query($conn, "SELECT * FROM posts WHERE nome = '$nome'");
-        print_r($search_name);
     }
 ?>
 <!DOCTYPE html>
@@ -15,7 +14,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>WebJournal | Search User</title>
     <style>
-        div.conteiner-search{
+        div.conteiner-read-search-post-search{
             margin: auto;
             margin-top: 40px;
             display: flex;
@@ -23,7 +22,7 @@
             justify-content: center;
             width: 75%;
         }
-        div.conteiner-search div.search input[type=text]{
+        div.conteiner-read-search-post-search div.search input[type=text]{
             padding: 10px 50px;
             border-radius: 20px;
             margin-right: 10px;
@@ -31,7 +30,7 @@
             box-shadow: 0 0 2.2em rgba(0,0,0,.3);
             width: 100%;
         }
-        div.conteiner-search div.btn input[type=submit]{
+        div.conteiner-read-search-post-search div.btn input[type=submit]{
             background-color: #23abff;
             padding: 10px 15px;
             color: white;
@@ -39,6 +38,45 @@
             border: none;
             margin-left: 10px;
             outline: none;
+        }
+        div.conteiner-read-search-post{
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div.conteiner-read-search-post div.posts div.post{
+            background-color: #fff;
+            margin-top: 20px;
+            width: 75%;
+            padding: 1em;
+            margin: auto;
+            box-shadow: 1px 0 3px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            border-bottom-right-radius: 15px;
+        }
+        div.conteiner-read-search-post div.posts div.post div.userName{
+            display: flex;
+            margin-bottom: 5px;
+        }
+        div.conteiner-read-search-post div.posts div.post div.userName div#userImg{
+            height: 30px;
+            width: 30px;
+            background: #23abff;
+            margin-right: 3px;
+            border-radius: 50px;
+        }
+        div.conteiner-read-search-post div.posts div.post{
+            text-align: center;
+        }
+        div.conteiner-read-search-post div.posts div.post div.userName{
+            align-items: center;
+            justify-content: center;
+        }
+        div.conteiner-read-search-post div.posts div.post div.imgPost{
+            text-align: center;
+        }
+        div.conteiner-read-search-post div.posts div.post div.imgPost img{
+            height: 50%;
+            width: 50%;
         }
     </style>
 </head>
@@ -59,7 +97,7 @@
             <a href="pages/blog.php" style="text-decoration: none; color: #23abff;"><i class="fa-solid fa-blog"></i></a>
         </div>
     </header>
-    <div class="conteiner-search">
+    <div class="conteiner-read-search-post-search">
         <form action="search.php" method="POST">
 
             <div class="search">
@@ -71,15 +109,15 @@
         </form>
     </div>
 
-    <div class="conteiner-read-search-post">
-        <?php while($search_post = mysqli_fetch_assoc($search_name)) { ?>
+    <div class="conteiner-read-search-post-read-search-post">
+        <?php while($search_post = mysqli_fetch_assoc($GLOBALS["search_name"])) { ?>
             <div class="search-post">
                 <div class="userName">
                     <div id="userImg"></div>
                     <p><?php echo $search_post['nome'] ?></p>
                 </div>
                 <div class="imgPost">
-                    <img id="imgPost" src="pages/<?php echo $search_post['path'] ?>">
+                    <img id="imgPost" src="<?php echo $search_post['path'] ?>">
                 </div>
                 <div class="subtitlePost">
                     <p><?php echo $search_post['post'] ?></p>
