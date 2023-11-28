@@ -27,6 +27,7 @@
         }
         div.conteiner div.posts div.post div.userName{
             display: flex;
+            margin-bottom: 5px;
         }
         div.conteiner div.posts div.post div.userName div#userImg{
             height: 30px;
