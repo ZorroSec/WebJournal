@@ -9,15 +9,27 @@
     <style>
         div.conteiner-search{
             margin: auto;
-            margin-top: 20px;
+            margin-top: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 75%;
         }
         div.conteiner-search div.search input[type=search]{
-            padding: 20px 10px;
+            padding: 10px 50px;
+            border-radius: 20px;
+            margin-right: 10px;
+            border: 1px solid rgba(0,0,0,0.3);
+            box-shadow: 0 0 2.2em rgba(0,0,0,.3);
             width: 100%;
+        }
+        div.conteiner-search div.btn input[type=submit]{
+            background-color: #23abff;
+            padding: 10px 15px;
+            color: white;
+            border-radius: 20px;
+            border: none;
+            margin-left: 10px;
         }
     </style>
 </head>
