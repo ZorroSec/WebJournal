@@ -16,7 +16,14 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         div.conteiner div.posts div.post{
+            background-color: #fff;
             margin-top: 20px;
+            width: 75%;
+            padding: 1em;
+            margin: auto;
+            box-shadow: 1px 0 3px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+            border-bottom-right-radius: 15px;
         }
         div.conteiner div.posts div.post div.userName{
             display: flex;
@@ -29,11 +36,14 @@
             border-radius: 50px;
         }
         div.conteiner div.posts div.post{
-            text-align: left;
+            text-align: center;
         }
         div.conteiner div.posts div.post div.userName{
             align-items: center;
             justify-content: center;
+        }
+        div.conteiner div.posts div.post div.imgPost{
+            text-align: center;
         }
         div.conteiner div.posts div.post div.imgPost img{
             height: 50%;
@@ -82,8 +92,6 @@
                     <div class="subtitlePost">
                         <p><?php echo $user_data['post'] ?></p>
                     </div>
-                    <br>
-                    <hr style="width: 500px; margin: auto;">
                     <!-- <div class="break"></div> -->
                 </div>
             <?php } ?>
