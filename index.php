@@ -26,18 +26,16 @@
             width: 30px;
             border-radius: 50px;
         }
-        @media only screen and (max-width: 900px){
-            div.conteiner div.posts div.post{
-                text-align: center;
-            }
-            div.conteiner div.posts div.post div.userName{
-                align-items: center;
-                justify-content: center;
-            }
-            div.conteiner div.posts div.post div.imgPost img{
-                height: 50%;
-                width: 50%;
-            }
+        div.conteiner div.posts div.post{
+            text-align: center;
+        }
+        div.conteiner div.posts div.post div.userName{
+            align-items: center;
+            justify-content: center;
+        }
+        div.conteiner div.posts div.post div.imgPost img{
+            height: 50%;
+            width: 50%;
         }
         div.break{
             margin: auto;
@@ -64,6 +62,9 @@
         <div class="link">
             <a href="pages/add.php" style="text-decoration: none; color: #23abff;"><i class="fa-solid fa-plus fa-lg"></i></a>
         </div>
+        <div class="link">
+            <a href="pages/blog.php" style="text-decoration: none; color: #23abff;"><i class="fa-solid fa-blog"></i></a>
+        </div>
     </header>
     <div class="conteiner">
         <div class="posts">
@@ -79,7 +80,9 @@
                     <div class="subtitlePost">
                         <p><?php echo $user_data['post'] ?></p>
                     </div>
-                    <div class="break"></div>
+                    <br>
+                    <hr style="width: 500px; margin: auto;">
+                    <!-- <div class="break"></div> -->
                 </div>
             <?php } ?>
         </div>
